@@ -8,11 +8,6 @@ namespace Chatbot.response
         protected int Id;
         protected Regex Trigger;
         protected string Text;
-
-        public Response()
-        {
-            // TODO: Deserialize JSON to assign values
-        }
     }
     
     // Data type: ResponseSet. Each initialized Chatbot must have a ResponseSet.
@@ -20,16 +15,17 @@ namespace Chatbot.response
     {
         // Fields:
         private Chatbot bot;
+        private List<Response> set; 
         
         public ResponseSet(Chatbot bot)
         {
             this.bot = bot;
+            this.Compile();
         }
         
         public ResponseSet Compile()
         {
-            // TODO: Implement method which collects responses
-            throw new System.NotImplementedException();
+            this.set = JsonConvert.DeserializeObject<List<Response>>(); // << Read in and add JSON
         }
     }
 }
