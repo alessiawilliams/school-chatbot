@@ -5,7 +5,7 @@ namespace Chatbot.util
 {
     public class Menu
     {
-        Console.WriteLine("Hello, and welcome to Chatbot. What would you like to do today? ::" +
+        Console.WriteLine("Hello, and welcome to Aery Chatbot. What would you like to do today? ::" +
 			"1 :: Enter Chatbot" +
 			"2 :: Quit);
 		Console.Write("Please select an option: ");
