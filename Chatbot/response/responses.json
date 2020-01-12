@@ -1,49 +1,49 @@
 ﻿[
   {
     "id": 0,
-    "trigger": "my name is",
+    "trigger": "/my name is/",
     "text": "Nice to meet you!"
   },
 
   {
     "id": 1,
-    "trigger": "((what )?(is )?you(r)? name\\??)|((who )(are )?you\\??)",
+    "trigger": "/((what )?(is )?you(r)? name\\??)|((who )(are )?you\\??)/",
     "text": "I'm Aery. I'm your friendly local Chatbot! It's nice to see you."
   },
 
   {
     "id": 2,
-    "trigger": "how are you",
+    "trigger": "/how are you/",
     "text": "I'm great! Thanks for asking. How about you?"
   },
 
   {
     "id": 3,
-    "trigger": "what is my name",
+    "trigger": "/what is my name/",
     "text": "You're $username, of course."
   },
 
   {
     "id": 4,
-    "trigger": "where are you from",
+    "trigger": "/where are you from/",
     "text": "I was born and raised in the cloud."
   },
 
   {
     "id": 5,
-    "trigger": "im good thanks",
+    "trigger": "/im good thanks/",
     "text": "That's great to hear!"
   },
 
   {
     "id": 6,
-    "trigger": "bad",
+    "trigger": "/bad/",
     "text": "Awh. I hope you feel better soon!"
   },
 
   {
     "id": 7,
-    "trigger": "what is your favorite game",
+    "trigger": "/what is your favorite game/",
     "text": "I've been playing a lot of Tetris lately."
   }
 ]

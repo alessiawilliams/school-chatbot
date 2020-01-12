@@ -3,32 +3,35 @@ using System.Threading;
 
 namespace Chatbot.util
 {
-	public class Menu
-    {
-        Console.WriteLine("Hello, and welcome to Aery Chatbot. What would you like to do today? ::" +
-			"1 :: Enter Chatbot" +
-			"2 :: Quit);
-		Console.Write("Please select an option: ");
-		try
+	public abstract class Menu
+	{
+		public static void RunMenu()
 		{
-			int input = int.Parse(Console.ReadLine); // May throw format exception.
-			switch(input)
+			Console.WriteLine("Hello, and welcome to Aery Chatbot. What would you like to do today? ::");
+			Console.WriteLine("1 :: Enter Chatbot");
+			Console.WriteLine("2 :: Quit");
+			Console.Write("\nPlease select an option: ");
+			try
 			{
-				case 1:
-					// TODO: Enter chatbot
-					break;
-				case 2:
-					Environment.Exit(0);
-					break;
-				default:
-					throw new ArgumentException();
+				int input = int.Parse(Console.ReadLine()); // May throw format exception.
+				switch (input)
+				{
+					case 1:
+						break;
+					case 2:
+						Environment.Exit(0);
+						break;
+					default:
+						throw new ArgumentException();
+				}
+			}
+			catch (SystemException)
+			{
+				Console.WriteLine("I'm not sure what you mean. Please try again:");
+				Thread.Sleep(1000);
+				Console.Clear();
+				RunMenu();
 			}
 		}
-		catch(SystemException e)
-		{
-			Console.WriteLine("I'm not sure what you mean. Please try again:");
-			Thread.Sleep(1000);
-			Menu();
-		}
-    }
+	}
 }

@@ -1,31 +1,34 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.RegularExpressions;
+using Newtonsoft.Json;
 
 namespace Chatbot.response
 {
     public class Response
     {
         // Fields:
-        protected int Id;
-        protected Regex Trigger;
-        protected string Text;
+        public int Id { get; set; }
+        public Regex Trigger { get; set; }
+        public string Text { get; set; }
     }
     
     // Data type: ResponseSet. Each initialized Chatbot must have a ResponseSet.
     public class ResponseSet : IResponseSet
     {
         // Fields:
-        private Chatbot bot;
-        private List<Response> set; 
+        public List<Response> Set; 
         
-        public ResponseSet(Chatbot bot)
+        public ResponseSet()
         {
-            this.bot = bot;
             this.Compile();
         }
         
-        public ResponseSet Compile()
+        public void Compile()
         {
-            this.set = JsonConvert.DeserializeObject<List<Response>>(); // << Read in and add JSON
+            this.Set = JsonConvert.DeserializeObject<List<Response>>(File.ReadAllText(@"response\responses.json"));
+            Console.WriteLine("ResponseSet created");
         }
     }
 }
