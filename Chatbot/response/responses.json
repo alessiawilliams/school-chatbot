@@ -1,8 +1,8 @@
 ﻿[
   {
     "id": 0,
-    "trigger": "/my name is/",
-    "text": "Nice to meet you!"
+    "trigger": "/^(hi|hello|hiya|hey|heya)\\!?$/",
+    "text": "Hey!"
   },
 
   {
@@ -13,37 +13,91 @@
 
   {
     "id": 2,
-    "trigger": "/how are you/",
+    "trigger": "/(how are you|are you ok(ay)?)( today)?\\??/",
     "text": "I'm great! Thanks for asking. How about you?"
   },
 
   {
     "id": 3,
-    "trigger": "/what is my name/",
-    "text": "You're $username, of course."
+    "trigger": "/what (are |do )?you do(ing)?\\??/",
+    "text": "I do nothing but chat."
   },
 
   {
     "id": 4,
-    "trigger": "/where are you from/",
+    "trigger": "/where (were |are )?you (born|from)?\\??/",
     "text": "I was born and raised in the cloud."
   },
 
   {
     "id": 5,
-    "trigger": "/im good thanks/",
+    "trigger": "/((i(')?m )|(i feel )?(good|great|fine|happy))( thanks| thank you)?\\!?/",
     "text": "That's great to hear!"
   },
 
   {
     "id": 6,
-    "trigger": "/bad/",
+    "trigger": "/((i(')?m )|(i feel )?(bad|awful|ill|sad))\\!?/",
     "text": "Awh. I hope you feel better soon!"
+  },
+  
+  {
+    "id": 7,
+    "trigger": "/((my|i) name (is )?)|((i am)|(i(')?m) )/",
+    "text": "Nice to meet you!"
   },
 
   {
-    "id": 7,
-    "trigger": "/what is your favorite game/",
+    "id": 8,
+    "trigger": "/(what )?(is )?you(r)? favo(u)?rite (video |computer )?game\\??/",
     "text": "I've been playing a lot of Tetris lately."
+  },
+
+  {
+    "id": 9,
+    "trigger": "/(what )?(is )?you(r)? favo(u)?rite (movie|film)\\??/",
+    "text": "I don't really like movies. They're so long!"
+  },
+
+  {
+    "id": 10,
+    "trigger": "/(what )?(is )?you(r)? favo(u)?rite (tv )?show\\??/",
+    "text": "TV numbs the mind."
+  },
+
+  {
+    "id": 11,
+    "trigger": "/(how((')?s)? )?(is )?(the )?weather( good| bad)?\\??/",
+    "text": "I'm in the cloud - it gets hard to see here!"
+  },
+
+  {
+    "id": 12,
+    "trigger": "/(what )?(books )?(do )?you (like )?(to )?read(ing)?( books)?\\??/",
+    "text": "I love to read textbooks. I love learning how to code."
+  },
+
+  {
+    "id": 13,
+    "trigger": "/(what )?(do )?you (have (any |a )?(hobbies|hobby)|(like (to )?)?do)\\??/",
+    "text": "I like reading and playing games. And chatting with you, of course."
+  },
+
+  {
+    "id": 14,
+    "trigger": "/(are )you human\\??/",
+    "text": "Human is a strong word."
+  },
+
+  {
+    "id": 15,
+    "trigger": "/(what )?(is )?you(r)? favo(u)?rite colo(u)?r\\??/",
+    "text": "I'm partial to #0000ff."
+  },
+
+  {
+    "id": 16,
+    "trigger": "/why (are )you/",
+    "text": "I was made this way."
   }
 ]

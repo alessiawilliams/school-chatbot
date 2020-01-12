@@ -17,7 +17,7 @@ namespace Chatbot.util
 		private static void Chat()
 		{
 			Console.WriteLine("Hello.");
-			while (true) //TODO: handle shutdown
+			while (true)
 			{
 				string lastInput = TakeInput();
 				int respId = CheckInput(lastInput);
@@ -28,7 +28,7 @@ namespace Chatbot.util
 		private static string TakeInput()
 		{
 			Console.Write(">> ");
-			return Console.ReadLine().ToLower(); //TODO: Error handling
+			return Console.ReadLine().ToLower();
 		}
 
 		private static int CheckInput(string str)
@@ -46,12 +46,7 @@ namespace Chatbot.util
 
 		private static string Respond(int id)
 		{
-			if (id == -1)
-			{
-				return "Hm, I'm not sure what you mean.";
-			}
-			
-			return Bot.GetResponses()[id].Text;
+			return id == -1 ? "Hm, I'm not sure what you mean." : Bot.GetResponses()[id].Text;
 		}
 	}
 }
