@@ -1,4 +1,3 @@
 # Chatbot
-C# Basic Chatbot
 
-I'm currently in the process of making this for a school project.
+A basic chatbot written in C# for a school project, with a particular focus on Regex and Object Oriented Programming.
